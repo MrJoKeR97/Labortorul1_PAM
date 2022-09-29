@@ -7,7 +7,7 @@
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/user_field"
+        android:id="@+id/userfield"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:ems="10"
@@ -19,22 +19,25 @@
      />
 
     <Button
-        android:id="@+id/main_btn"
+        android:id="@+id/mainbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/main_btn"
-        android:layout_below="@id/user_field"
+        android:layout_below="@id/userfield"
         android:layout_marginTop="75sp"
         android:layout_marginHorizontal="130sp"
         />
 
     <TextView
-        android:id="@+id/result_info"
+        android:id="@+id/resultinfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/main_btn"
+        android:layout_below="@id/mainbtn"
         android:layout_marginTop="50sp"
         android:textAlignment="center"
         android:textSize="25sp"
         />
+
+
+
 </RelativeLayout>

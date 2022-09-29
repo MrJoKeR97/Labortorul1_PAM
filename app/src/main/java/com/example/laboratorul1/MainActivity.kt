@@ -11,9 +11,10 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private var user_field: EditText? = null
-    private var main_btn:  Button? = null
-    private var result_info: TextView? = null
+    //private var user_field: EditText? = null
+    //private var main_btn:  Button? = null
+    //private var result_info: TextView? = null
+
 
 
     @SuppressLint("SetTextI18n")
@@ -21,19 +22,19 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        user_field = findViewById(R.id.user_field)
-        main_btn = findViewById(R.id.main_btn)
-        result_info = findViewById(R.id.result_info)
+      val userfield = findViewById<EditText>(R.id.userfield)
+      val mainbtn = findViewById<Button>(R.id.mainbtn)
+      val resultinfo = findViewById<TextView>(R.id.resultinfo)
 
-        main_btn?.setOnClickListener {
-            if(user_field?.text?.toString()?.trim()?.equals("")!!)
+        mainbtn?.setOnClickListener {
+            if(userfield?.text?.toString()?.trim()?.equals("")!!)
                 Toast.makeText(this,"Introduceti textul", Toast.LENGTH_LONG).show()
             else {
                 var cuvinte  = 0
-                for( cuvint in user_field?.text.toString().split(" ")){
+                for( cuvint in userfield.text.toString().split(" ")){
                     if(cuvint.contains('a')|| cuvint.contains('A'))cuvinte++
                 }
-                result_info?.text = "Cuvintele cu litera  a/A: $cuvinte"
+                resultinfo?.text = "Cuvintele cu litera  a/A: $cuvinte"
                  }
             }
 
